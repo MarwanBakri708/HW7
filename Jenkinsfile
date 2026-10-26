@@ -8,9 +8,9 @@ pipeline {
             }
         }
 
-        stage('Build') {
+        stage('Create Artifact') {
             steps {
-                sh 'mvn clean package'
+                sh 'mkdir -p target && echo "HW7 artifact content" > target/app.jar'
             }
         }
     }
